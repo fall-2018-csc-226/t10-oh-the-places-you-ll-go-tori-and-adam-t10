@@ -97,14 +97,17 @@ def extract_place(file_content):
 
     name = file_content.readline().strip("\n")
     location = file_content.readline().strip("\n")
-    latitude = file_content.readline().strip("\n")
-    longitude = file_content.readline().strip("\n")
+    latitude = float(file_content.readline().strip("\n")) # Converts our lat and long inputs into integers
+    longitude = float(file_content.readline().strip("\n"))
     color = file_content.readline().strip("\n")
     # FIXME Construct a tuple with all five values in the correct order. Don't forget types, and tuples are immutable!
     # Example: place_tuple = ("Scott's example", "Somewhere special", 41, -10, "black")
-    # b =
-    (name, location, latitude, longitude, color) = ("Tori","Berea",37.575790,-84.289290, "blue") #("Adam", "Meru", 0.046390, 37.652750, "green")]
+    #(name, location, latitude, longitude, color) = ("Tori","Berea",37.575790,-84.289290, "blue")
     place_tuple = (name, location, latitude, longitude, color)  # Finish assembling the tuple!
+    # if next_line[0] == "#":
+    #     pass
+    # else:
+    #     place_tuple= place_tuple + next_line
     return place_tuple
 
 
