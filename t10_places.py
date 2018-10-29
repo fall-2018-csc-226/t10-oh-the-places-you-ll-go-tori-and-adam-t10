@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Emily Lovell & Scott Heggen      TODO: Change this to your names
-# Username: lovelle & heggens             TODO: Change this to your usernames
+# Author: Adam and Tori      TODO: Change this to your names
+# Username: Adam254 & phillipsvi           TODO: Change this to your usernames
 #
 # Assignment: T10: Oh, the Places You'll Go!
 #
@@ -9,7 +9,7 @@
 #           and to use tuples and lists correctly.
 ######################################################################
 # Acknowledgements:
-#
+##
 # Original Authors: Dr. Scott Heggen and Dr. Jan Pearce
 
 # licensed under a Creative Commons
@@ -96,10 +96,18 @@ def extract_place(file_content):
     # TODO   the line starts with a #; if it does, ignore that line.
 
     name = file_content.readline().strip("\n")
-
+    location = file_content.readline().strip("\n")
+    latitude = float(file_content.readline().strip("\n")) # Converts our lat and long inputs into integers
+    longitude = float(file_content.readline().strip("\n"))
+    color = file_content.readline().strip("\n")
     # FIXME Construct a tuple with all five values in the correct order. Don't forget types, and tuples are immutable!
     # Example: place_tuple = ("Scott's example", "Somewhere special", 41, -10, "black")
-    place_tuple = (name, )      # Finish assembling the tuple!
+    #(name, location, latitude, longitude, color) = ("Tori","Berea",37.575790,-84.289290, "blue")
+    place_tuple = (name, location, latitude, longitude, color)  # Finish assembling the tuple!
+    # if next_line[0] == "#":
+    #     pass
+    # else:
+    #     place_tuple= place_tuple + next_line
     return place_tuple
 
 
